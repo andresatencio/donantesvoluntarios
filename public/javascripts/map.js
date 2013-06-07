@@ -1,4 +1,4 @@
-;(function(window, document, undefined) {
+;(function(window, document, $, undefined) {
 
   var Map = function(id) {
     this.id = id;
@@ -33,9 +33,10 @@
 
   Map.prototype.onMapClick = function(e) {
     var position = e.latlng;
-    var marker = L.marker([position.lat, position.lng]).addTo(this.map);
+    var marker = L.marker([position.lat, position.lng]);
+    $('#newdon-modal').modal();
   };
 
   window.Map = Map;
 
-})(window, document);
+})(window, document, jQuery);

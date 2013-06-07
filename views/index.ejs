@@ -11,7 +11,33 @@
     <![endif]-->
   </head>
   <body>
-    <div id='map'></div>
+    <div id="newdon-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Nuevo donante</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group">
+            <input type="text" name="nombre" placeholder="Nombre y Apellido">
+          </div>
+          <select name="gruposanguineo">
+            <option value="o-">0 Negativo</option>
+            <option value="o+">0 Positivo</option>
+            <option value="a-">A Negativo</option>
+            <option value="a+">A Positivo</option>
+          </select> 
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+
+    <section id="main">
+      <div id='map'></div>
+    </section>
 
 
     <script src='/javascripts/jquery.min.js'></script>
