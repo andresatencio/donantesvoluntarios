@@ -11,6 +11,11 @@ var express = require('express')
 
 var app = express();
 
+//ConexionDB
+var db = require('./model/Schema');
+db();
+
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
