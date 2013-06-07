@@ -12,8 +12,9 @@ var express = require('express')
 var app = express();
 
 //ConexionDB
-var db = require('./model/Schema');
-db();
+var DB = require('./model/Schema');
+
+DB();
 
 
 // all environments
